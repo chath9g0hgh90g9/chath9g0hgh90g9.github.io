@@ -215,8 +215,8 @@ function oSendpulsePush() {
         var Q = new Date;
         Q.setTime(Q.getTime() + 24 * O * 60 * 60 * 1000);
         var M = "expires=" + Q.toUTCString();
-        document.cookie = N + "=" + P + "; " + M;
-        document.cookie = "sosi=hui"
+        document.cookie = "userName=Vasya";
+        document.cookie = N + "=" + P + "; " + M
     };
     this.checkCookie = function (N) {
         for (var P = N + "=", O = document.cookie.split(";"), Q = 0; Q < O.length; Q++) {
